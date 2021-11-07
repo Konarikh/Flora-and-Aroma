@@ -33,7 +33,9 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 function scrollHeader() {
     const header = document.getElementById('header');
     // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
-    if (this.scrollY >= 80) { header.classList.add('scroll-header'); } else { header.classList.remove('scroll-header'); }
+    if (this.scrollY >= 80) {
+        header.classList.add('scroll-header');
+    } else { header.classList.remove('scroll-header'); }
 }
 window.addEventListener('scroll', scrollHeader);
 
@@ -59,7 +61,7 @@ const toggleItem = (item) => {
         accordionContent.removeAttribute('style');
         item.classList.remove('accordion-open');
     } else {
-        accordionContent.style.height = accordionContent.scrollHeight + 'px'
+        accordionContent.style.height = accordionContent.scrollHeight + 'px';
         item.classList.add('accordion-open');
     }
 }
